@@ -16,3 +16,4 @@ activity()
 $lastActivity = Activity::all()->last();
 $lastActivity->description; //returns 'The subject name is article name, the causer name is user name and Laravel is awesome';
 ```
+Be aware when using placeholders for long strings of content such as URLs or filenames. Placeholders are converted to the value prior to storage, and long descriptions may run into the VARCHAR limit of 255 characters.
